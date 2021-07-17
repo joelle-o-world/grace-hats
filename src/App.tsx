@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import './App.sass'
 
-import ExploreLayout from './components/ExploreLayout';
+import Footer from './components/Footer'
+import HomepageImages from './components/HomepageImages';
+import {PhotoshopPicker} from 'react-color'
 
-const series = (i:number) => ({
-  x: i * 300,
-  y: 0
-})
+
+const series = (i:number, spacing=100) => {
+  let angle = i + 2
+  let rotations = i / (Math.PI * 2)
+  let r = rotations * spacing
+
+  let x = r * Math.cos(angle)
+  let y = r * Math.sin(angle)
+
+  return {x,y}
+}
 
 function App() {
+  const [color, setColor] = useState('f8b87f')
   return (
-    <div className="App">
-      <ExploreLayout distributionFunction={series}>
-        <p>A</p>
-        <p>B</p>
-        <p>C</p>
-        <p>D</p>
-        <p>E</p>
-      </ExploreLayout>
+    <div className="App" style={{backgroundColor: color}}>
+      <h1 className="MainHeader">sibyl benign</h1>
+      <HomepageImages/>
     </div>
   );
 }

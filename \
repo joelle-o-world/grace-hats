@@ -1,0 +1,30 @@
+import React from 'react';
+import './App.css';
+
+import ExploreLayout from './components/ExploreLayout';
+
+const series = (i:number) => {
+  let angle = i
+  let r = i * 300
+
+  let x = r * Math.cos(angle)
+  let y = r * Math.sin(angle)
+
+  return {x,y}
+}
+
+function App() {
+  return (
+    <div className="App">
+      <ExploreLayout distributionFunction={series}>
+        <p>A</p>
+        <p>B</p>
+        <p>C</p>
+        <p>D</p>
+        <p>E</p>
+      </ExploreLayout>
+    </div>
+  );
+}
+
+export default App;

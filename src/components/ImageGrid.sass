@@ -1,0 +1,21 @@
+.ImageGrid
+  display: flex
+  flex-wrap: wrap
+  grid-gap: 50px
+  justify-items: center
+  align-items: center
+  margin: 100px
+  img
+    position: relative
+    filter: blur(40px)
+    transition: filter 1s, transform 10s 1s
+    transform: scale(.9)
+    width: 100px
+    transform-origin: center
+    
+    &:hover
+      transition: transform .7s, filter .9s,
+      transform: scale(3)
+      cursor: pointer
+      filter: blur(0px)
+      z-index: 10
