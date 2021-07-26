@@ -2,10 +2,61 @@ body
   background-color: #181b18
   color: white
   padding: 25px
-  //margin-right: 400px
   position: relative
   h1.MainHeader
     position: fixed
     filter: blur(2px)
     color: black
     font-family: sans-serif
+
+.SiteFooter
+  position: sticky
+  right: 0px
+  left: 0px
+
+  min-height: 500px
+  overflow: visible
+
+  img.bg-image
+    position: absolute
+    bottom: 0px
+    left: 0px
+    width: 100%
+    box-sizing: border-box
+
+.ImageGrid
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+  grid-gap: 50px
+  justify-items: center
+  align-items: center
+  margin: 100px
+  &::after
+    content: ""
+    flex: auto
+  >*
+  img
+    position: relative
+    filter: blur(40px)
+    transition: filter 1s, transform 10s 1s
+    transform: scale(.9)
+    width: 100px
+    transform-origin: center
+    
+    &:hover
+      transition: transform .7s, filter .9s,
+      transform: scale(3)
+      cursor: pointer
+      filter: blur(0px)
+      z-index: 10
+
+.ExploreLayout
+  overflow: auto
+  border: 1px solid green
+  box-sizing: border-box
+  position: absolute
+  left: 0px
+  right: 0px
+  top: 0px
+  bottom: 0px
