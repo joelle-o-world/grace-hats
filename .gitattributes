@@ -1,1 +1,4 @@
 src/full-res-images/** filter=lfs diff=lfs merge=lfs -text
+spec/**.jpeg filter=lfs diff=lfs merge=lfs -text
+spec/**.jpg filter=lfs diff=lfs merge=lfs -text
+spec/**.docx filter=lfs diff=lfs merge=lfs -text
