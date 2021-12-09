@@ -25,28 +25,40 @@ import Img20 from "../img/homepage-images/E5059BDD-787C-4219-BC61-6A74F4FB31E8.j
 export const HomepageImages: FunctionComponent = () => {
   return (
     <ImageGrid>
-      <img src={Img1} />
-      <img src={Img2} />
-      <img src={Img3} />
-      <img src={Img4} />
-      <img src={Img5} />
-      <img src={Img6} />
-      <img src={Img7} />
-      <img src={Img8} />
-      <img src={Img9} />
-      <img src={Img10} />
-      <img src={Img11} />
-      <img src={Img12} />
-      <img src={Img13} />
-      <img src={Img14} />
-      <img src={Img15} />
-      <img src={Img16} />
-      <img src={Img17} />
-      <img src={Img18} />
-      <img src={Img19} />
-      <img src={Img20} />
+      <HomepageImage thumbnail={Img1} caption="anya in hat" />
+      <HomepageImage thumbnail={Img2} />
+      <HomepageImage thumbnail={Img3} />
+      <HomepageImage thumbnail={Img4} />
+      <HomepageImage thumbnail={Img5} />
+      <HomepageImage thumbnail={Img6} />
+      <HomepageImage thumbnail={Img7} />
+      <HomepageImage thumbnail={Img8} />
+      <HomepageImage thumbnail={Img9} />
+      <HomepageImage thumbnail={Img10} />
+      <HomepageImage thumbnail={Img11} />
+      <HomepageImage thumbnail={Img12} />
+      <HomepageImage thumbnail={Img13} />
+      <HomepageImage thumbnail={Img14} />
+      <HomepageImage thumbnail={Img15} />
+      <HomepageImage thumbnail={Img16} />
+      <HomepageImage thumbnail={Img17} />
+      <HomepageImage thumbnail={Img18} />
+      <HomepageImage thumbnail={Img19} />
+      <HomepageImage thumbnail={Img20} />
     </ImageGrid>
   );
 };
 
 export default HomepageImages;
+
+export const HomepageImage: FunctionComponent<{
+  thumbnail: string;
+  caption?: string;
+}> = ({ thumbnail, caption }) => {
+  return (
+    <div className="HomepageImage">
+      <img src={thumbnail} className="HomepageImageThumbnail" />
+      {caption ? <p className="caption">{caption}</p> : null}
+    </div>
+  );
+};

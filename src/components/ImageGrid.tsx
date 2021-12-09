@@ -1,6 +1,5 @@
 import React, {FunctionComponent} from 'react';
 
-import './ImageGrid.sass'
 
 export const ImageGrid: FunctionComponent = ({children}) => {
   const numberOfChildren = React.Children.count(children)

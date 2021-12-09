@@ -3,6 +3,7 @@ body
   color: white
   padding: 25px
   position: relative
+  margin-top: 50px
   h1.MainHeader
     position: fixed
     filter: blur(2px)
@@ -35,21 +36,24 @@ body
   &::after
     content: ""
     flex: auto
-  >*
-  img
+  .HomepageImage
     position: relative
     filter: blur(40px)
-    transition: filter 1s, transform 10s 1s
+    transition: filter 1s, transform 10s 
     transform: scale(.9)
-    width: 100px
     transform-origin: center
     
     &:hover
-      transition: transform .7s, filter .9s,
+      transition: transform 0s, filter .4s,
       transform: scale(3)
       cursor: pointer
       filter: blur(0px)
       z-index: 10
+    >img.HomepageImageThumbnail
+      width: 100px
+    p.caption
+      color: white
+      font-size: 5px
 
 .ExploreLayout
   overflow: auto
